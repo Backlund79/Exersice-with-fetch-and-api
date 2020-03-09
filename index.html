@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/jquery-3.4.1.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/script.js"></script>
+
+  <title>Dev helper</title>
+</head>
+
+<body>
+
+
+  <!-- Jumbotron in bootstrap -->
+  <div class="jumbotron jumbotron-fluid mb-0">
+    <div class="container">
+      <h1 class="display-4"></h1>
+      <!-- <p class="lead">Lead för sidan här.</p> -->
+    </div>
+  </div>
+
+  <!-- Navbar in bootstrap -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Dev Helper</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="cities.html">Cities</a>
+        </li>
+
+
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+
+
+  <div class="container pt-4 pb-4">
+    <div class="row top">
+      <h1 id="wName">Welcome to Dev Helper</h1>
+    </div>
+    <div class="row pl-5">
+      <div class="row">
+        <p><i>All the placeholders you will ever need</i></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="text-center"><strong>
+            <i id="insp">Quote loading...</i>
+          </strong>
+        </h3>
+      </div>
+      <div class="col-sm-9">
+      </div>
+      <div class="col-sm-3">
+        <p><i id="inspAuthor">Loading...</i></p>
+      </div>
+    </div>
+    <br>
+    <!-- <div class="row bottom">
+      <div class="col-sm-6">
+        <p>This is a place where i store the tools i normaly use as placeholders in webdevelopment.</p>
+      </div>
+      <div class="col-sm-6">
+        <p>Lorem ipsum generator, goat imgage generator, cat image generator and more.</p>
+      </div>
+    </div> -->
+
+    <div class="row border">
+      <div class="col-sm-4 bg-light">
+        <h4>Lorem ipsum generator</h4>
+        <br>
+
+        <h5>Number of paragraphs</h5>
+        <input type="number" class="paragraph" value="3" min="1" max="10">
+
+        <br>
+        <br>
+
+        <h5>Length of paragraphs</h5>
+        <form id="pLength">
+          <input type="radio" name="pLength" value="short"> -Short &nbsp;
+          <input type="radio" name="pLength" value="medium" checked> -Medium &nbsp;
+          <input type="radio" name="pLength" value="long"> -Long &nbsp;
+          <input type="radio" name="pLength" value="verylong"> -XL &nbsp;
+        </form>
+        <br>
+        <br>
+
+        <h5>Add extra HTML elements</h5>
+        <input type="checkbox" name="link" id="link" checked> -Add links. <br>
+        <input type="checkbox" name="ul" id="ul"> -Add unordered lists. <br>
+        <input type="checkbox" name="ol" id="ol"> -Add numbered lists. <br>
+        <input type="checkbox" name="dl" id="dl"> -Add description lists. <br>
+        <input type="checkbox" name="bq" id="bq"> -Add blockquotes. <br>
+        <input type="checkbox" name="code" id="code"> -Add code samples. <br>
+        <input type="checkbox" name="headers" id="loremHead" checked> -Add headers. <br>
+        <br>
+        <br>
+        <h5>Options</h5>
+        <input type="checkbox" name="allcaps" id="allCaps"> -Use ALL CAPS. <br>
+        <input type="checkbox" name="prude" id="prude"> -Prude version. <br>
+
+
+        <br>
+        <br>
+        <input onclick="loremFunction()" type="button" value="Generate Lorem ipsum">
+        <br>
+        <br>
+      </div>
+
+      <div class="col-sm-8 lWindow border shadow" id="lorem">
+
+      </div>
+
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-6">
+        <h5>Goat placeholder generator</h5>
+        Width: <input value="300" id="gWidth" class="imgSize" type="number"> &nbsp;
+        Height: <input value="300" id="gHeight" class="imgSize" type="number"> &nbsp;
+        <input onclick="goatFunction()" type="button" value="Generate Goat">
+        <div id="gImg" class="gImg border shadow">
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h5>Cat placeholder generator</h5>
+        <input onclick="catFunction()" type="button" value="Generate Cat">
+        <div id="cImg" class="gImg border shadow">
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-sm-6">
+          <div id="gImg" class="gImg border shadow">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div id="cImg" class="gImg border shadow">
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <br>
+    <br>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <p>The domestic goat or simply goat (Capra aegagrus hircus) is a subspecies of C. aegagrus domesticated from
+          the wild goat of Southwest Asia and Eastern Europe.
+          The goat is a member of the animal family Bovidae and
+          the subfamily Caprinae, meaning it is closely related to the sheep. There are over 300 distinct breeds of
+          goat. Goats are one of the oldest domesticated species of animal, and have been used for milk, meat, fur
+          and skins across much of the world. Milk from goats is often turned into goat cheese.</p>
+      </div>
+      <div class="col-sm-6">
+        <p>The cat (Felis catus) is a small carnivorous mammal. It is the only domesticated species in the
+          family Felidae and often referred to as the domestic cat to distinguish it from wild members of the
+          family. The cat is either a house cat, a farm cat or a feral cat; latter ranges freely and avoids human
+          contact. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.
+          About 60 cat breeds are recognized by various cat registries.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="mastfoot mt-auto text-center bg-dark">
+    <div class="container">
+      <div class="inner">
+        <!--Section: Contact v.1-->
+        <section class="section pb-5">
+
+          <!--Section heading-->
+          <h2 class="section-heading h1 pt-4">Contact info</h2>
+          <!--Section description-->
+          <p class="section-description pb-4">This is a site about pandas. If you have any questions or sugestions
+            please dont hesitate to contact us.</p>
+
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-lg-5 mb-4">
+
+              <!--Form with header-->
+              <div class="card">
+
+                <div class="card-body">
+                  <!--Header-->
+                  <div class="form-header blue accent-1">
+                    <h3><i class="fas fa-envelope"></i> Write to us:</h3>
+                  </div>
+
+                  <p>Worlds best panda site.</p>
+                  <br>
+
+                  <!--Body-->
+                  <div class="md-form">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <label for="form-name">Name</label>
+                    <input type="text" id="form-name" class="form-control">
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <label for="form-email">E-mail</label>
+                    <input type="text" id="form-email" class="form-control">
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-tag prefix grey-text"></i>
+                    <label for="form-Subject">Subjet</label>
+                    <input type="text" id="form-Subject" class="form-control">
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-pencil-alt prefix grey-text"></i>
+                    <label for="form-text">Message</label>
+                    <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button class="btn btn-dark">Send</button>
+                  </div>
+
+                </div>
+
+              </div>
+              <!--Form with header-->
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7">
+
+              <!--Google map-->
+              <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2133.2085873385836!2d11.999377016616139!3d57.678934181112076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff369d0835015%3A0xba46082e9c214f49!2sIT-H%C3%B6gskolan!5e0!3m2!1ssv!2sse!4v1576420737803!5m2!1ssv!2sse"
+                  width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
+
+              <br>
+              <!--contact info-->
+              <div class="infotext">
+                <div class="row text-center">
+                  <div class="col-md-4">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Adress</p>
+                    <p>Country</p>
+                  </div>
+
+                  <div class="col-md-4">
+                    <i class="fas fa-phone"></i>
+                    <p>Telephone</p>
+                    <p></p>
+                  </div>
+
+                  <div class="col-md-4">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@gmail.com</p>
+                    <p>sale@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Grid column-->
+
+          </div>
+
+        </section>
+        <!--Section: Contact v.1-->
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
